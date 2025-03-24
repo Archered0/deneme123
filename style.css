@@ -1,3 +1,4 @@
+/* Sayfa Genel Stili */
 body {
     margin: 0;
     background-color: black;
@@ -8,4 +9,64 @@ body {
     height: 100vh;
     font-family: Arial, sans-serif;
     text-align: center;
+    overflow: hidden;
+}
+
+/* Arka Planda Parlayan Yıldızlar */
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2016/11/29/12/18/stars-1867616_1280.png') repeat;
+    animation: twinkle 10s infinite;
+}
+@keyframes twinkle {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+/* Kalp Atışı Efekti */
+.heart {
+    color: red;
+    font-size: 50px;
+    animation: heartbeat 1s infinite;
+}
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Parlayan Yazılar */
+h1, p {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+    100% { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+}
+
+/* Şık Müzik Butonu */
+#playMusic {
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.7);
+    margin-top: 20px;
+}
+
+/* Yazılar Yavaşça Belirsin */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
 }
