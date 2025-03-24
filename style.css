@@ -17,8 +17,11 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: url('https://cdn.pixabay.com/photo/2016/11/29/12/18/stars-1867616_1280.png') repeat;
+    background: url('stars.png') repeat;
+    background-size: cover;
     animation: twinkle 10s infinite;
+}
+
 }
 @keyframes twinkle {
     0% { opacity: 0.8; }
